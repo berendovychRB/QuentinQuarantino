@@ -4,20 +4,19 @@ public class Fibonacci {
 
     public static void main(String[] args) {
 
-        int[] arr = new int[8];
-        int a = 1;
-        int b = 1;
-        int c;
+        int[] arr = new int[10];
+        arr[0] = 1;
+        arr[1] = 1;
 
-        System.out.print("Fibonacci's numbers: " + a + " " + b +  " ");
+        for(int i = 2; i < arr.length; i++){
 
-        for(int i = 0; i < arr.length; i++){
+            arr[i] = arr[i - 1] + arr[i - 2];
 
-            c = a + b;
-            a = b;
-            b = c;
-            System.out.print(c + " ");
         }
 
+        System.out.print("Fibonacci's numbers: ");
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + " ");
+        }
     }
 }
